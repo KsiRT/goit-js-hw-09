@@ -7,12 +7,23 @@ const startButton = document.querySelector('button[data-start]');
 // console.log(startButton);
 const stopButton = document.querySelector('button[data-stop]');
 // console.log(stopButton);
+stopButton.disabled = true;
 
-const onStartClick = evt => {
-  document.body.style.backgroundColor = getRandomHexColor();
+let colorInterval = null;
+
+const onStartClick = ({ target }) => {
+  target.disabled = true;
+  stopButton.disabled = false;
+  colorInterval = setInterval(() => {
+    document.body.style.backgroundColor = getRandomHexColor();
+  }, 1000);
 };
 
-const onStopClick = evt => {};
+const onStopClick = ({ target }) => {
+  target.disabled = true;
+  startButton.disabled = false;
+  clearInterval(colorInterval);
+};
 
 startButton.addEventListener('click', onStartClick);
 stopButton.addEventListener('click', onStopClick);
