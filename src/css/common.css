@@ -16,16 +16,34 @@ img {
   display: block;
   max-width: 100%;
 }
+.disco-btn {
+  background-color: #ff7300;
+  color: #000000;
+  display: block;
+  padding: 10px 35px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 0 auto 10px;
+}
+.disco-btn:disabled {
+  background-color: #a3a3a3;
+  border-color: #212121;
+  cursor: no-drop;
+}
 
 .timer-input {
   display: block;
-  margin: 0 auto;
+  margin-left: 150px;
   margin-bottom: 20px;
   padding: 10px 20px;
   text-align: center;
   transition: font-size 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
   font-size: 15px;
   border-radius: 5px;
+}
+.timer-input:disabled {
+  cursor: no-drop;
 }
 
 .timer-btn:hover,
@@ -40,7 +58,7 @@ img {
   font-size: 20px;
   font-weight: bold;
   border-radius: 8px;
-  margin: 0 auto 10px;
+  margin: 0 210px 450px;
 }
 
 .start-timer-btn:hover,
@@ -60,6 +78,8 @@ img {
   display: flex;
   justify-content: center;
   gap: 30px;
+  color: #fafafa;
+  margin-left: 250px;
 }
 
 .field {
@@ -75,4 +95,13 @@ img {
 
 .label {
   font-size: 20px;
+}
+
+.bcg {
+  background-image: url(../images/ghostface.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.goback {
+  color: #fafafa;
 }

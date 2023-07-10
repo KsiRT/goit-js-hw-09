@@ -57,6 +57,8 @@ function getTimeUntilTarget() {
   if (difference < 0) {
     clearInterval(timerInterval);
     Notiflix.Notify.success('Memento mori');
+    startTimerBtn.disabled = false;
+    dateInput.disabled = false;
     return;
   }
   // console.log(convertedDiff);
